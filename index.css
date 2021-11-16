@@ -39,7 +39,7 @@ body {font-family: Verdana, sans-serif;}
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 14.27%;
   color: #666;
   text-align: center;
 }
@@ -53,7 +53,7 @@ body {font-family: Verdana, sans-serif;}
 .days li {
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 14.27%;
   text-align: center;
   margin-bottom: 5px;
   font-size:12px;
