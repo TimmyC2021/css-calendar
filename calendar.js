@@ -1,16 +1,14 @@
 
 export const drawCalendar = (today) => {
 
-  console.log(today);
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Sptember", "October", "November", "December"];
   
-  let month = months[today.getMonth()]
-  let year = today.getFullYear()
-  let date = today.getDate()
+  const month = months[today.getMonth()];
+  const year = today.getFullYear();
   
   const longDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const shortDays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
-  let weekday = longDays[today.getDay()];
+  const weekday = longDays[today.getDay()];
   
   // Month and Year in banner
     const monthWord = document.getElementById("monthWord");
@@ -25,14 +23,11 @@ export const drawCalendar = (today) => {
     let index;
     const weekDays = document.getElementById("weekdays");
     weekDays.innerHTML = "";
-    console.log(weekDays.childElementCount);
     
-    for (index=0;   index<7; index++) {
+    for ( index=0;   index<7; index++) {
       let node = document.createElement("li");
-      // let nbsp = document.createTextNode("\u00A0")
       node.appendChild(document.createTextNode(shortDays[index]));
       weekDays.appendChild(node);
-      // document.getElementById("weekdays").appendChild(nbsp);
     }
   
   // days (1-31)
@@ -53,21 +48,18 @@ export const drawCalendar = (today) => {
     // Dates 1 to last day of month
     for (index=1-padding;   index<daysInMonth+1; index++) {
       let node = document.createElement("li");
-      // let nbsp = document.createTextNode("\u00A0")
       if (index > 0) {
         node.appendChild(document.createTextNode(index));
       }
       daysObj.appendChild(node);
-      // document.getElementById("weekdays").appendChild(nbsp);
     }
 
     // Add event listener to days
     for (index=0;index<daysObj.children.length;index++) {
       daysObj.children[index].addEventListener('click',(ev) => {
         let message = month + " " + year;
-        message = ev.target.innerHTML + " " + message
+        message = ev.target.innerHTML + " " + message;
         alert(message)})
     }
-    console.log(daysObj.children.length);
-  }
+}
   
