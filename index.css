@@ -62,6 +62,7 @@ body {font-family: Verdana, sans-serif;}
   margin-bottom: 5px;
   font-size:12px;
   color: #777;
+  cursor: pointer;
 }
 
 .days li .active {
