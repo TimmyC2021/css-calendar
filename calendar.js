@@ -60,5 +60,14 @@ export const drawCalendar = (today) => {
       daysObj.appendChild(node);
       // document.getElementById("weekdays").appendChild(nbsp);
     }
+
+    // Add event listener to days
+    for (index=0;index<daysObj.children.length;index++) {
+      daysObj.children[index].addEventListener('click',(ev) => {
+        let message = month + " " + year;
+        message = ev.target.innerHTML + " " + message
+        alert(message)})
+    }
+    console.log(daysObj.children.length);
   }
   
