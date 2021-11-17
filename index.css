@@ -23,12 +23,16 @@ body {font-family: Verdana, sans-serif;}
 
 .month .prev {
   float: left;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .month .next {
   float: right;
-  padding-top: 10px;
+  padding-top: 0px;
+}
+
+.prev, .next {
+  cursor: pointer;
 }
 
 .weekdays {
