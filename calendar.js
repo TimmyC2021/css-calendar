@@ -1,7 +1,7 @@
 
 export const drawCalendar = (today) => {
 
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Sptember", "October", "November", "December"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   
   const month = months[today.getMonth()];
   const year = today.getFullYear();
